@@ -1,0 +1,678 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+$green-lime: #a3cf5e;
+$green-high: #83ce60;
+$green-medium: #00af66;
+$green-low: #00664f;
+$green-target-text: #35783b;
+$green-target-outer: #276450;
+$green-target-inner: #23ab6b;
+$green-puce: #d9e9ae;
+$white: #fff;
+$grey: #ccc;
+$grey-low: #333;
+$orange: #ff7f32;
+$orange-low: #e95b0e;
+$red-high: #c90e2b;
+$red-medium: #c4122c;
+$red-low: #921d2e;
+$red-puce: #ffc488;
+$red-gradient: #ff0000;
+$margin-bottom-medium: 20px;
+$border-radius-big-petal: 180px;
+$screen-width: 1920px;
+$screen-height: 1080px;
+
+.noselect {
+	-moz-user-select: none;
+	user-select: none;
+}
+
+body {
+	font-family: 'Whitney A', 'Whitney B', Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	width: $screen-width;
+	height: $screen-height;
+	background-color: #000;
+	overflow: hidden;
+	@extend .noselect;
+}
+
+img {
+	margin:0;
+	padding:0;
+	border:none;
+	@extend .noselect;
+}
+
+strong {
+	font-weight: 600;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+.container {
+	width: $screen-width;
+	height: $screen-height;
+	overflow: hidden;
+	text-align: center;
+
+	h1 {
+		font-size: 140px;
+		line-height: 140px;
+		font-weight: normal;
+		letter-spacing: -3px;
+		color: $green-high;
+		@extend .noselect;
+	}
+
+	p {
+		font-size: 50px;
+		line-height: 58px;
+		font-weight: normal;
+		letter-spacing: 0;
+		color: $green-medium;
+		margin-bottom: $margin-bottom-medium;
+		@extend .noselect;
+	}
+
+	.container_attract {
+		width: $screen-width;
+		height: $screen-height;
+		p {
+			margin-top: 45px;
+			font-size: 45px;
+			line-height: 45px;
+			@extend .noselect;
+		}
+	}
+
+	.attract_bg_container {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		width: $screen-width;
+		height: $screen-height;
+		overflow: hidden;
+		background-image: url(/images/attract-bg.jpg);
+  	background-position: 0 0;
+  	background-repeat: no-repeat;
+  	display: none;
+	}
+
+	.attract_copy_container {
+		position: absolute;
+		z-index: 2;
+		width: $screen-width;
+		top: 140px;
+		left: 0;
+		display: none;
+	}
+
+	.attract_bird_container {
+		position: absolute;
+		z-index: 3;
+		top: 715px;
+		left: 585px;
+		width: 781px;
+		height: 227px;
+		background-image: url(/images/attract-bird.png);
+  	background-position: 0 0;
+  	background-repeat: no-repeat;
+  	display: none;
+	}
+
+	.container_intro,
+	.container_start,
+	.container_last
+	 {
+		h1 {
+			margin-top: 140px;
+			@extend .noselect;
+		}
+		p {
+			margin-top: 35px;
+			@extend .noselect;
+		}
+		button {
+			margin-top: 35px;
+		}
+	}
+
+	.container_intro,
+	.container_choose,
+	.container_info,
+	.container_last {
+		width: $screen-width;
+		height: $screen-height;
+		overflow: hidden;
+		background-image: url(/images/bg-intro.jpg);
+  	background-position: 0 0;
+  	background-repeat: no-repeat;
+	}
+
+	.container_start {
+		width: $screen-width;
+		height: $screen-height;
+		overflow: hidden;
+		background-image: url(/images/bg-start.jpg);
+  	background-position: 0 0;
+  	background-repeat: no-repeat;
+	}
+
+	.container_choose {
+		h1 {
+			margin-top: 98px;
+			font-size: 90px;
+			letter-spacing: -1px;
+			line-height: 90px;
+			@extend .noselect;
+		}
+	}
+
+	button {
+		font-family: 'Whitney A', 'Whitney B', Helvetica, Arial, sans-serif;
+  	background-color: $green-medium;
+  	color: $white;
+  	filter: none;
+  	font-size: 1em;
+  	line-height: 1em;
+  	font-weight: normal;
+  	letter-spacing: 0;
+  	border: none;
+  	outline-style: none;
+  	text-decoration: none;
+  	text-align: left;
+  	padding: 0;
+  	display: none;
+  	@extend .noselect;
+  	&.ng-click-active {
+  		background-color: $green-high;
+  	}
+	}
+	button:focus {
+		background-color: $green-high;
+	}
+
+	.btn_highlight {
+		background-color: $green-high;
+	}
+
+	.btn_big_cta {
+		font-size: 55px;
+		line-height: 55px;
+		font-weight: normal;
+		letter-spacing: 0;
+		padding-top: 34px;
+		padding-bottom: 34px;
+		padding-left: 60px;
+		padding-right: 130px;
+		background-image: url(/images/btn-arrow-green-big.png);
+  	background-position: right 44px center;
+  	background-repeat: no-repeat;
+  	background-size: 64px 64px;
+	}
+
+	.petal_container {
+		width: 1418px;
+		margin-top: 40px;
+		margin-left: auto;
+  	margin-right: auto;
+		.petal {
+			height: 802px;
+			width: 632px;
+			background-color: $green-lime;
+			font-weight: normal;
+			float: left;
+			h2 {
+				font-size: 56px;
+				line-height: 56px;
+				letter-spacing: 0;
+				margin-top: 434px;
+				color: $grey-low;
+				@extend .noselect;
+			}
+			p {
+				font-size: 25px;
+				line-height: 33px;
+				margin-top: 10px;
+				width: 390px;
+				margin-left: auto;
+  			margin-right: auto;
+				font-weight: normal;
+				color: $grey-low;
+				@extend .noselect;
+			}
+			button {
+				margin-top: 8px;
+				font-size: 40px;
+				line-height: 40px;
+				font-weight: normal;
+				padding-top: 20px;
+				padding-bottom: 22px;
+				padding-left: 40px;
+				padding-right: 108px; 
+				background-image: url(/images/btn-arrow-green-medium.png);
+		  	background-repeat: no-repeat;
+		  	background-size: 45px 45px;
+				background-position: right 40px center;
+		  	@extend .noselect;
+			}
+			&.ng-click-active {
+				> button {
+	  			background-color: $green-high;
+	  		}
+	  	}
+	  	&:focus {
+	  		> button {
+	  			background-color: $green-high;
+	  		}
+	  	}
+	  	&:active {
+	  		> button {
+	  			background-color: $green-high;
+	  		}
+	  	}
+		}
+
+	}
+	
+	.left {
+		margin-right: 142px;
+		margin-left: 12px;
+		border-top-left-radius: $border-radius-big-petal;
+		border-bottom-right-radius: $border-radius-big-petal;
+		background-image: url(/images/petal-portrait-monkey.png);
+		background-repeat: no-repeat;
+		background-size: 314px 308px;
+		background-position: 152px 99px;
+		button {
+			letter-spacing: 0;
+		}
+	}
+	.right {
+		border-top-right-radius: $border-radius-big-petal;
+		border-bottom-left-radius: $border-radius-big-petal;
+		background-image: url(/images/petal-portrait-mongoose.png);
+		background-repeat: no-repeat;
+		background-size: 314px 308px;
+		background-position: 152px 99px;
+		button {
+			letter-spacing: 0;
+		}
+	}
+
+	.container_info {
+		h1 {
+			margin-top: 98px;
+			font-size: 92px;
+			line-height: 92px;
+			letter-spacing: -1px;
+			@extend .noselect;
+		}
+		p {
+			margin-top: -2px;
+			padding-bottom: 20px;
+			@extend .noselect;
+		}	
+		.question {
+			margin-top: 30px;
+			display: none;
+			color: $green-high;
+
+			h2 {
+				font-size: 62px;
+				line-height: 62px;
+				clear: both;
+				@extend .noselect;
+			}
+			.info_button_container {
+				width: 1244px;
+				margin-left: auto;
+  			margin-right: auto;
+				button {
+					float: left;
+					margin-top: 22px;
+					margin-right: 41px;
+					margin-bottom: 58px;
+					width: 216px;
+					height: 85px;
+					text-align: center;
+					font-size: 37px;
+					line-height: 37px;
+					padding-top: 0;
+					@extend .noselect;
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+		.question + .question {
+			h2 {
+				letter-spacing: -1px;
+			}
+			.info_button_container {
+				width: 381px;
+				button {
+					width: 170px;
+				}
+			}
+		}
+		> .info_button_container {
+			padding-top: 21px;
+			clear: both;
+			button {
+				font-size: 55px;
+				line-height: 55px;
+				letter-spacing: 0;
+			}
+		}
+	}
+
+	.container_start {
+		button {
+			margin-top: 93px;
+			font-size: 55px;
+			line-height: 55px;
+			letter-spacing: 0;
+		}
+	}
+
+	.challenge_set {
+		
+		.challenge_background {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+		  height: 100%;
+		  background-size: cover;
+		}
+
+		.challenge_overlay {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			width: $screen-width;
+		  height: $screen-height;
+		  content: '';
+		  background-size: cover;
+			background: $red-gradient;
+			background-image: linear-gradient($red-gradient, $red-gradient);
+			opacity: 0.25; 
+		}
+
+		.challenge_target {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 3;
+			@extend .noselect;
+		}
+	}
+
+	.container_challenge_timer {
+			position: absolute;
+			top: 25px;
+			left: 861px;
+			z-index: 3;
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			background-color: $white;
+			border: 20px solid $green-low;
+			box-shadow: 0 0 0 0px $green-low;
+		.challenge_timer {
+			width: 200px;
+			height: 200px;
+			margin-left: -25px;
+			margin-top: -25px;
+			overflow: hidden;
+		}
+	}
+
+	.big_petal {
+		position: absolute;
+		z-index: 3;
+		top: 33px;
+		left: 599px;
+		height: 1008px;
+		width: 722px;
+		p {
+			margin-top: 508px;
+			margin-bottom: 0;
+			text-align: center;
+			width: 390px;
+			font-size: 48px;
+			line-height: 60px;
+			font-weight: normal;
+			margin-left: auto;
+  		margin-right: auto;
+  		@extend .noselect;
+  		&.challenge_time {
+  			margin-top: 2px;
+  			font-size: 54px;
+  			font-weight: 500;
+  			line-height: 64px;
+  		}
+  		&.pager {
+  			margin-top: 40px;
+  			font-size: 42px;
+				line-height: 42px;
+  		}
+		}
+		button {
+			margin-top: 38px;
+			font-size: 38px;
+			line-height: 38px;
+			font-weight: normal;
+			padding-top: 23px;
+			padding-bottom: 23px;
+			padding-left: 44px;
+			padding-right: 104px; 
+			background-image: url(/images/btn-arrow-green-medium.png);
+	  	background-repeat: no-repeat;
+	  	background-size: 45px 45px;
+			background-position: right 40px center;
+			@extend .noselect;
+		}
+		&.ng-click-active {
+			> button {
+  			background-color: $green-high;
+  		}
+  	}
+  	&:focus {
+  		> button {
+  			background-color: $green-high;
+  		}
+  	}
+  	&:active {
+  		> button {
+  			background-color: $green-high;
+  		}
+  	}
+	}
+
+	.petal_hit {
+		display: none;
+		background-color: $green-lime;
+		p {
+			color: $grey-low;
+		}
+		.challenge_time {
+			font-weight: normal;
+		}
+	}
+	.petal_miss {
+		display: none;
+		background-color: $red-medium;
+		p {
+			color: $white;
+		}
+		button {
+			margin-top: 106px;
+		}
+	}
+
+	.left_big {
+		margin-right: 140px;
+		border-top-left-radius: $border-radius-big-petal;
+		border-bottom-right-radius: $border-radius-big-petal;
+		background-repeat: no-repeat;
+		background-size: 358px 351px;
+		background-position: 184px 116px;
+		&.petal_hit {
+			background-image: url(/images/petal-big-hit-portrait-monkey.png);
+		}
+		&.petal_miss {
+			background-image: url(/images/petal-big-miss-portrait-monkey.png);
+		}
+	}
+	.right_big {
+		border-top-right-radius: $border-radius-big-petal;
+		border-bottom-left-radius: $border-radius-big-petal;
+		background-repeat: no-repeat;
+		background-size: 358px 351px;
+		background-position: 184px 116px;
+		&.petal_hit {
+			background-image: url(/images/petal-big-hit-portrait-mongoose.png);
+		}
+		&.petal_miss {
+			background-image: url(/images/petal-big-miss-portrait-mongoose.png);
+		}
+	}
+
+	.target_hit {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 3;
+		width: 188px;
+    height: 188px;
+    border-radius: 50%;
+    background-color: $green-puce;
+    border: 12px solid $green-target-inner;
+    box-shadow: 0 0 0 14px $green-target-outer;
+    p {
+    	width: 100%;
+    	padding-top: 80px;
+    	color: $green-target-text;
+    	font-size: 31px;
+    	line-height: 31px;
+    	font-weight: normal;
+    	@extend .noselect;
+    }
+	}
+
+	.target_miss {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 3;
+		width: 188px;
+    height: 188px;
+    border-radius: 50%;
+    background-color: $red-puce;
+    border: 12px solid $red-low;
+    box-shadow: 0 0 0 14px $red-high;
+    p {
+    	width: 100%;
+    	padding-top: 80px;
+    	color: $red-low;
+    	font-size: 31px;
+    	line-height: 31px;
+    	font-weight: normal;
+    	@extend .noselect;
+    }
+	}
+
+	.btn_cant_find {
+		position: absolute;
+		z-index: 2;
+		bottom: 40px;
+		left: 792px;
+		width: 332px;
+		height: 85px;
+		font-size: 38px;
+		line-height: 38px;
+		font-weight: normal;
+		letter-spacing: 0;
+		padding-left: 40px;
+		background-color: $orange;
+		background-image: url(/images/btn-exit-red-big.png);
+	  background-repeat: no-repeat;
+	  background-size: 47px 47px;
+	  background-position: right 32px center;
+	  @extend .noselect;
+	  &.ng-click-active {
+			background-color: $orange-low;
+		}
+	}
+	.btn_cant_find:focus {
+		background-color: $orange-low;
+	}
+
+	.container_last {
+		button {
+			margin-top: 90px;
+			width: 420px;
+			height: 125px;
+			padding-left: 50px;
+			background-position: 87% 50%;
+		}
+		.footer {
+			height: 70px;
+			font-size: 36px;
+			line-height: 36px;
+			font-style: italic;
+		}
+	}
+
+	.footer {
+		position: absolute;
+		bottom: 0;
+		height: 100px;
+		z-index: 2;
+		color: $white;
+		width: $screen-width;
+		margin-left: auto;
+  	margin-right: auto;
+		.btn_exit {
+			background-color: transparent;
+			width: 270px;
+			height: 60px;
+			font-size: 31px;
+			line-height: 31px;
+			letter-spacing: 0;
+			color: $grey;
+			padding: 0;
+			background-image: url(/images/btn-exit-red.png);
+		  background-repeat: no-repeat;
+		  background-size: 41px 41px;
+		  background-position: 99% 50%;
+		  @extend .noselect;
+		  &.ng-click-active {
+  			color: $white;	
+  		}
+		}
+		.btn_exit:focus {
+			color: $white;
+		}
+	}
+
+}

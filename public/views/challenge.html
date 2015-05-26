@@ -1,0 +1,41 @@
+<div id="challenge">
+	
+	<div class="container_challenge_timer">
+  	<div class="challenge_timer" data-timer="30"></div>
+  </div>
+
+	<!--<div class="challenge_set" ng-repeat="i in challenges" my-repeat-directive>-->
+	<div class="challenge_set" ng-repeat="i in challenges">
+		
+		<div ng-if="challenge_index == $index">
+
+			<div class="challenge_background" alt="" ng-mousedown="miss(i, $event)" style="background: url(/images/challenges/{{i.image_name}}) 0 0 no-repeat;"></div>
+			<div class="challenge_overlay"></div>
+
+			<img class="challenge_target" src="/images/challenges/{{i.target_image_name}}" alt="" ng-mousedown="hit(i, $event)" style="top:{{i.target_y_pos}}px; left:{{i.target_x_pos}}px;">
+
+			<div class="target_hit"><p>Nice find!</p></div>
+
+			<div class="target_miss"><p>Try again</p></div>
+
+		  <div class="big_petal petal_miss" ng-mousedown="next()">
+		    <p>You missed your chance at a meal!</p>
+		    <p class="challenge_time"></p>
+		    <button>Next nightjar</button>
+		    <p class="pager"></p>
+		  </div>
+
+		  <div class="big_petal petal_hit" ng-mousedown="next()">
+		    <p>You found that nightjar in</p>
+		    <p class="challenge_time"></p>
+		    <button>Next nightjar</button>
+		    <p class="pager"></p>
+		  </div>
+
+		</div>
+
+  </div>
+
+  <button class="btn_cant_find" id="btn_cant_find_it" ng-mousedown="giveup()">I can&rsquo;t find it</button>
+
+</div>

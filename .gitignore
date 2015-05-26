@@ -1,0 +1,29 @@
+
+# Logs and databases #
+######################
+*.log
+*mongodb
+*exports
+
+# Other #
+#####################################
+*.sass-cache
+*.ignore
+*public/css/fonts
+*public/images/challenges
+*public/sounds
+*public/images/attract-bg.jpg
+*public/images/attract-bird.png
+*public/images/bg-intro.jpg
+*public/images/bg-start.jpg
+*public/images/petal-big-hit-portrait-mongoose.png
+*public/images/petal-big-hit-portrait-monkey.png
+*public/images/petal-big-miss-portrait-mongoose.png
+*public/images/petal-big-miss-portrait-monkey.png
+*public/images/petal-portrait-mongoose.png
+*public/images/petal-portrait-monkey.png
+
+# OS or Editor folders #
+########################
+*.DS_Store
+Thumbs.db

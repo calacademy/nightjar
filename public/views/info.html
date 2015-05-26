@@ -1,0 +1,27 @@
+<div id="info" class="container_info">
+	<h1>I&rsquo;ll share with science!</h1>
+	<p>By playing this game, you&rsquo;ll help scientists<br>learn more about how animals see.</p>
+	<div class="question" id="question1">
+	  <h2>How old are you?</h2>
+	  <div class="info_button_container">
+		  <button value="under 10" ng-mousedown="age($event)">Under 10</button>
+		  <button value="10 to 15" ng-mousedown="age($event)">10 to 15</button>
+		  <button value="16 to 35" ng-mousedown="age($event)">16 to 35</button>
+		  <button value="36 to 50" ng-mousedown="age($event)">36 to 50</button>
+		  <button value="over 50" ng-mousedown="age($event)">Over 50</button>
+		 </div>
+	</div>
+	<div class="question" id="question2">
+	  <h2>Have you played this game before?</h2>
+	  <div class="info_button_container">
+	  	<button value="0" ng-mousedown="playedbefore($event)">No</button>
+	  	<button value="1" ng-mousedown="playedbefore($event)">Yes</button>
+		</div>
+	</div>
+	<div class="info_button_container">
+		<button class="btn_big_cta" id="btn_play_game" ng-mousedown="next()"><strong>Play</strong> the game!</button>
+	</div>
+	<div class="footer">
+	  <button class="btn_exit" id="btn_exit_no_thanks" ng-mousedown="exit()">Exit &mdash; no thanks</button>
+	</div>
+</div>

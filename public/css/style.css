@@ -1,0 +1,729 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../.rvm/gems/ruby-2.2.0@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../.rvm/gems/ruby-2.2.0@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../.rvm/gems/ruby-2.2.0@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../.rvm/gems/ruby-2.2.0@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../.rvm/gems/ruby-2.2.0@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../.rvm/gems/ruby-2.2.0@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../.rvm/gems/ruby-2.2.0@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../.rvm/gems/ruby-2.2.0@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../.rvm/gems/ruby-2.2.0@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 31, ../../sass/style.scss */
+.noselect, body, img, .container h1, .container p, .container .container_attract p, .container .container_intro h1,
+.container .container_start h1,
+.container .container_last h1, .container .container_intro p,
+.container .container_start p,
+.container .container_last p, .container .container_choose h1, .container button, .container .petal_container .petal h2, .container .petal_container .petal p, .container .petal_container .petal button, .container .container_info h1, .container .container_info p, .container .container_info .question h2, .container .container_info .question .info_button_container button, .container .challenge_set .challenge_target, .container .big_petal p, .container .big_petal button, .container .target_hit p, .container .target_miss p, .container .btn_cant_find, .container .footer .btn_exit {
+  -moz-user-select: none;
+  user-select: none;
+}
+
+/* line 36, ../../sass/style.scss */
+body {
+  font-family: 'Whitney A', 'Whitney B', Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 1920px;
+  height: 1080px;
+  background-color: #000;
+  overflow: hidden;
+}
+
+/* line 47, ../../sass/style.scss */
+img {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* line 54, ../../sass/style.scss */
+strong {
+  font-weight: 600;
+}
+
+/* line 58, ../../sass/style.scss */
+button::-moz-focus-inner {
+  border: 0;
+}
+
+/* line 62, ../../sass/style.scss */
+.container {
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  text-align: center;
+}
+/* line 68, ../../sass/style.scss */
+.container h1 {
+  font-size: 140px;
+  line-height: 140px;
+  font-weight: normal;
+  letter-spacing: -3px;
+  color: #83ce60;
+}
+/* line 77, ../../sass/style.scss */
+.container p {
+  font-size: 50px;
+  line-height: 58px;
+  font-weight: normal;
+  letter-spacing: 0;
+  color: #00af66;
+  margin-bottom: 20px;
+}
+/* line 87, ../../sass/style.scss */
+.container .container_attract {
+  width: 1920px;
+  height: 1080px;
+}
+/* line 90, ../../sass/style.scss */
+.container .container_attract p {
+  margin-top: 45px;
+  font-size: 45px;
+  line-height: 45px;
+}
+/* line 98, ../../sass/style.scss */
+.container .attract_bg_container {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  background-image: url(/images/attract-bg.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  display: none;
+}
+/* line 112, ../../sass/style.scss */
+.container .attract_copy_container {
+  position: absolute;
+  z-index: 2;
+  width: 1920px;
+  top: 140px;
+  left: 0;
+  display: none;
+}
+/* line 121, ../../sass/style.scss */
+.container .attract_bird_container {
+  position: absolute;
+  z-index: 3;
+  top: 715px;
+  left: 585px;
+  width: 781px;
+  height: 227px;
+  background-image: url(/images/attract-bird.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  display: none;
+}
+/* line 138, ../../sass/style.scss */
+.container .container_intro h1,
+.container .container_start h1,
+.container .container_last h1 {
+  margin-top: 140px;
+}
+/* line 142, ../../sass/style.scss */
+.container .container_intro p,
+.container .container_start p,
+.container .container_last p {
+  margin-top: 35px;
+}
+/* line 146, ../../sass/style.scss */
+.container .container_intro button,
+.container .container_start button,
+.container .container_last button {
+  margin-top: 35px;
+}
+/* line 151, ../../sass/style.scss */
+.container .container_intro,
+.container .container_choose,
+.container .container_info,
+.container .container_last {
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  background-image: url(/images/bg-intro.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+/* line 163, ../../sass/style.scss */
+.container .container_start {
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  background-image: url(/images/bg-start.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+/* line 173, ../../sass/style.scss */
+.container .container_choose h1 {
+  margin-top: 98px;
+  font-size: 90px;
+  letter-spacing: -1px;
+  line-height: 90px;
+}
+/* line 182, ../../sass/style.scss */
+.container button {
+  font-family: 'Whitney A', 'Whitney B', Helvetica, Arial, sans-serif;
+  background-color: #00af66;
+  color: #fff;
+  filter: none;
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: normal;
+  letter-spacing: 0;
+  border: none;
+  outline-style: none;
+  text-decoration: none;
+  text-align: left;
+  padding: 0;
+  display: none;
+}
+/* line 198, ../../sass/style.scss */
+.container button.ng-click-active {
+  background-color: #83ce60;
+}
+/* line 202, ../../sass/style.scss */
+.container button:focus {
+  background-color: #83ce60;
+}
+/* line 206, ../../sass/style.scss */
+.container .btn_highlight {
+  background-color: #83ce60;
+}
+/* line 210, ../../sass/style.scss */
+.container .btn_big_cta {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: normal;
+  letter-spacing: 0;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  padding-left: 60px;
+  padding-right: 130px;
+  background-image: url(/images/btn-arrow-green-big.png);
+  background-position: right 44px center;
+  background-repeat: no-repeat;
+  background-size: 64px 64px;
+}
+/* line 225, ../../sass/style.scss */
+.container .petal_container {
+  width: 1418px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 230, ../../sass/style.scss */
+.container .petal_container .petal {
+  height: 802px;
+  width: 632px;
+  background-color: #a3cf5e;
+  font-weight: normal;
+  float: left;
+}
+/* line 236, ../../sass/style.scss */
+.container .petal_container .petal h2 {
+  font-size: 56px;
+  line-height: 56px;
+  letter-spacing: 0;
+  margin-top: 434px;
+  color: #333;
+}
+/* line 244, ../../sass/style.scss */
+.container .petal_container .petal p {
+  font-size: 25px;
+  line-height: 33px;
+  margin-top: 10px;
+  width: 390px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: normal;
+  color: #333;
+}
+/* line 255, ../../sass/style.scss */
+.container .petal_container .petal button {
+  margin-top: 8px;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: normal;
+  padding-top: 20px;
+  padding-bottom: 22px;
+  padding-left: 40px;
+  padding-right: 108px;
+  background-image: url(/images/btn-arrow-green-medium.png);
+  background-repeat: no-repeat;
+  background-size: 45px 45px;
+  background-position: right 40px center;
+}
+/* line 271, ../../sass/style.scss */
+.container .petal_container .petal.ng-click-active > button {
+  background-color: #83ce60;
+}
+/* line 276, ../../sass/style.scss */
+.container .petal_container .petal:focus > button {
+  background-color: #83ce60;
+}
+/* line 281, ../../sass/style.scss */
+.container .petal_container .petal:active > button {
+  background-color: #83ce60;
+}
+/* line 289, ../../sass/style.scss */
+.container .left {
+  margin-right: 142px;
+  margin-left: 12px;
+  border-top-left-radius: 180px;
+  border-bottom-right-radius: 180px;
+  background-image: url(/images/petal-portrait-monkey.png);
+  background-repeat: no-repeat;
+  background-size: 314px 308px;
+  background-position: 152px 99px;
+}
+/* line 298, ../../sass/style.scss */
+.container .left button {
+  letter-spacing: 0;
+}
+/* line 302, ../../sass/style.scss */
+.container .right {
+  border-top-right-radius: 180px;
+  border-bottom-left-radius: 180px;
+  background-image: url(/images/petal-portrait-mongoose.png);
+  background-repeat: no-repeat;
+  background-size: 314px 308px;
+  background-position: 152px 99px;
+}
+/* line 309, ../../sass/style.scss */
+.container .right button {
+  letter-spacing: 0;
+}
+/* line 315, ../../sass/style.scss */
+.container .container_info h1 {
+  margin-top: 98px;
+  font-size: 92px;
+  line-height: 92px;
+  letter-spacing: -1px;
+}
+/* line 322, ../../sass/style.scss */
+.container .container_info p {
+  margin-top: -2px;
+  padding-bottom: 20px;
+}
+/* line 327, ../../sass/style.scss */
+.container .container_info .question {
+  margin-top: 30px;
+  display: none;
+  color: #83ce60;
+}
+/* line 332, ../../sass/style.scss */
+.container .container_info .question h2 {
+  font-size: 62px;
+  line-height: 62px;
+  clear: both;
+}
+/* line 338, ../../sass/style.scss */
+.container .container_info .question .info_button_container {
+  width: 1244px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 342, ../../sass/style.scss */
+.container .container_info .question .info_button_container button {
+  float: left;
+  margin-top: 22px;
+  margin-right: 41px;
+  margin-bottom: 58px;
+  width: 216px;
+  height: 85px;
+  text-align: center;
+  font-size: 37px;
+  line-height: 37px;
+  padding-top: 0;
+}
+/* line 354, ../../sass/style.scss */
+.container .container_info .question .info_button_container button:last-child {
+  margin-right: 0;
+}
+/* line 361, ../../sass/style.scss */
+.container .container_info .question + .question h2 {
+  letter-spacing: -1px;
+}
+/* line 364, ../../sass/style.scss */
+.container .container_info .question + .question .info_button_container {
+  width: 381px;
+}
+/* line 366, ../../sass/style.scss */
+.container .container_info .question + .question .info_button_container button {
+  width: 170px;
+}
+/* line 371, ../../sass/style.scss */
+.container .container_info > .info_button_container {
+  padding-top: 21px;
+  clear: both;
+}
+/* line 374, ../../sass/style.scss */
+.container .container_info > .info_button_container button {
+  font-size: 55px;
+  line-height: 55px;
+  letter-spacing: 0;
+}
+/* line 383, ../../sass/style.scss */
+.container .container_start button {
+  margin-top: 93px;
+  font-size: 55px;
+  line-height: 55px;
+  letter-spacing: 0;
+}
+/* line 393, ../../sass/style.scss */
+.container .challenge_set .challenge_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+/* line 403, ../../sass/style.scss */
+.container .challenge_set .challenge_overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 1920px;
+  height: 1080px;
+  content: '';
+  background-size: cover;
+  background: #ff0000;
+  background-image: linear-gradient(#ff0000, #ff0000);
+  opacity: 0.25;
+}
+/* line 418, ../../sass/style.scss */
+.container .challenge_set .challenge_target {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+/* line 427, ../../sass/style.scss */
+.container .container_challenge_timer {
+  position: absolute;
+  top: 25px;
+  left: 861px;
+  z-index: 3;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 20px solid #00664f;
+  box-shadow: 0 0 0 0px #00664f;
+}
+/* line 438, ../../sass/style.scss */
+.container .container_challenge_timer .challenge_timer {
+  width: 200px;
+  height: 200px;
+  margin-left: -25px;
+  margin-top: -25px;
+  overflow: hidden;
+}
+/* line 447, ../../sass/style.scss */
+.container .big_petal {
+  position: absolute;
+  z-index: 3;
+  top: 33px;
+  left: 599px;
+  height: 1008px;
+  width: 722px;
+}
+/* line 454, ../../sass/style.scss */
+.container .big_petal p {
+  margin-top: 508px;
+  margin-bottom: 0;
+  text-align: center;
+  width: 390px;
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: normal;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 465, ../../sass/style.scss */
+.container .big_petal p.challenge_time {
+  margin-top: 2px;
+  font-size: 54px;
+  font-weight: 500;
+  line-height: 64px;
+}
+/* line 471, ../../sass/style.scss */
+.container .big_petal p.pager {
+  margin-top: 40px;
+  font-size: 42px;
+  line-height: 42px;
+}
+/* line 477, ../../sass/style.scss */
+.container .big_petal button {
+  margin-top: 38px;
+  font-size: 38px;
+  line-height: 38px;
+  font-weight: normal;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  padding-left: 44px;
+  padding-right: 104px;
+  background-image: url(/images/btn-arrow-green-medium.png);
+  background-repeat: no-repeat;
+  background-size: 45px 45px;
+  background-position: right 40px center;
+}
+/* line 493, ../../sass/style.scss */
+.container .big_petal.ng-click-active > button {
+  background-color: #83ce60;
+}
+/* line 498, ../../sass/style.scss */
+.container .big_petal:focus > button {
+  background-color: #83ce60;
+}
+/* line 503, ../../sass/style.scss */
+.container .big_petal:active > button {
+  background-color: #83ce60;
+}
+/* line 509, ../../sass/style.scss */
+.container .petal_hit {
+  display: none;
+  background-color: #a3cf5e;
+}
+/* line 512, ../../sass/style.scss */
+.container .petal_hit p {
+  color: #333;
+}
+/* line 515, ../../sass/style.scss */
+.container .petal_hit .challenge_time {
+  font-weight: normal;
+}
+/* line 519, ../../sass/style.scss */
+.container .petal_miss {
+  display: none;
+  background-color: #c4122c;
+}
+/* line 522, ../../sass/style.scss */
+.container .petal_miss p {
+  color: #fff;
+}
+/* line 525, ../../sass/style.scss */
+.container .petal_miss button {
+  margin-top: 106px;
+}
+/* line 530, ../../sass/style.scss */
+.container .left_big {
+  margin-right: 140px;
+  border-top-left-radius: 180px;
+  border-bottom-right-radius: 180px;
+  background-repeat: no-repeat;
+  background-size: 358px 351px;
+  background-position: 184px 116px;
+}
+/* line 537, ../../sass/style.scss */
+.container .left_big.petal_hit {
+  background-image: url(/images/petal-big-hit-portrait-monkey.png);
+}
+/* line 540, ../../sass/style.scss */
+.container .left_big.petal_miss {
+  background-image: url(/images/petal-big-miss-portrait-monkey.png);
+}
+/* line 544, ../../sass/style.scss */
+.container .right_big {
+  border-top-right-radius: 180px;
+  border-bottom-left-radius: 180px;
+  background-repeat: no-repeat;
+  background-size: 358px 351px;
+  background-position: 184px 116px;
+}
+/* line 550, ../../sass/style.scss */
+.container .right_big.petal_hit {
+  background-image: url(/images/petal-big-hit-portrait-mongoose.png);
+}
+/* line 553, ../../sass/style.scss */
+.container .right_big.petal_miss {
+  background-image: url(/images/petal-big-miss-portrait-mongoose.png);
+}
+/* line 558, ../../sass/style.scss */
+.container .target_hit {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 188px;
+  height: 188px;
+  border-radius: 50%;
+  background-color: #d9e9ae;
+  border: 12px solid #23ab6b;
+  box-shadow: 0 0 0 14px #276450;
+}
+/* line 570, ../../sass/style.scss */
+.container .target_hit p {
+  width: 100%;
+  padding-top: 80px;
+  color: #35783b;
+  font-size: 31px;
+  line-height: 31px;
+  font-weight: normal;
+}
+/* line 581, ../../sass/style.scss */
+.container .target_miss {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 188px;
+  height: 188px;
+  border-radius: 50%;
+  background-color: #ffc488;
+  border: 12px solid #921d2e;
+  box-shadow: 0 0 0 14px #c90e2b;
+}
+/* line 593, ../../sass/style.scss */
+.container .target_miss p {
+  width: 100%;
+  padding-top: 80px;
+  color: #921d2e;
+  font-size: 31px;
+  line-height: 31px;
+  font-weight: normal;
+}
+/* line 604, ../../sass/style.scss */
+.container .btn_cant_find {
+  position: absolute;
+  z-index: 2;
+  bottom: 40px;
+  left: 792px;
+  width: 332px;
+  height: 85px;
+  font-size: 38px;
+  line-height: 38px;
+  font-weight: normal;
+  letter-spacing: 0;
+  padding-left: 40px;
+  background-color: #ff7f32;
+  background-image: url(/images/btn-exit-red-big.png);
+  background-repeat: no-repeat;
+  background-size: 47px 47px;
+  background-position: right 32px center;
+}
+/* line 622, ../../sass/style.scss */
+.container .btn_cant_find.ng-click-active {
+  background-color: #e95b0e;
+}
+/* line 626, ../../sass/style.scss */
+.container .btn_cant_find:focus {
+  background-color: #e95b0e;
+}
+/* line 631, ../../sass/style.scss */
+.container .container_last button {
+  margin-top: 90px;
+  width: 420px;
+  height: 125px;
+  padding-left: 50px;
+  background-position: 87% 50%;
+}
+/* line 638, ../../sass/style.scss */
+.container .container_last .footer {
+  height: 70px;
+  font-size: 36px;
+  line-height: 36px;
+  font-style: italic;
+}
+/* line 646, ../../sass/style.scss */
+.container .footer {
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  z-index: 2;
+  color: #fff;
+  width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 655, ../../sass/style.scss */
+.container .footer .btn_exit {
+  background-color: transparent;
+  width: 270px;
+  height: 60px;
+  font-size: 31px;
+  line-height: 31px;
+  letter-spacing: 0;
+  color: #ccc;
+  padding: 0;
+  background-image: url(/images/btn-exit-red.png);
+  background-repeat: no-repeat;
+  background-size: 41px 41px;
+  background-position: 99% 50%;
+}
+/* line 669, ../../sass/style.scss */
+.container .footer .btn_exit.ng-click-active {
+  color: #fff;
+}
+/* line 673, ../../sass/style.scss */
+.container .footer .btn_exit:focus {
+  color: #fff;
+}
